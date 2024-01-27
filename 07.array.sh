@@ -8,4 +8,4 @@ echo "Fruit 2 : ${FRUITS[1]}"
 
 echo "Fruit 3 : ${FRUITS[2]}"
 
-echo "All Fruits : ${FRUITS[2]}"
+echo "All Fruits : ${FRUITS[@]}"
