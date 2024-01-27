@@ -1,6 +1,7 @@
 #!/bin/bash
 
-USERNAME=$1
-PASSWORD=$2
+echo "Please enter your age :"
 
-echo "Username is : $USERNAME and Password is : $PASSWORD"
+read -s AGE
+
+echo "Hey! You are $AGE old"
