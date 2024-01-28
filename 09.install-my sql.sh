@@ -1,11 +1,11 @@
 #!/bin/bash
 
-ID=($id -u)
+ID=$(id -u)
 
 if [ $ID -ne 0 ]
 then
 echo "ERROR :: Please run this with root access"
-
+exit 1
 else
 echo "Runnig with root access"
 fi
