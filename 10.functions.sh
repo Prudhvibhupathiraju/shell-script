@@ -20,7 +20,7 @@ else
 echo "Runnig with root access"
 fi
 
-yum insatll mysql -y
+yum install mysql -y
 
 VALIDATE $? "mysql"
 
