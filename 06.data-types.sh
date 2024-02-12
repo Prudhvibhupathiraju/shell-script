@@ -10,4 +10,4 @@ read -s y
 
 SUM=$(($x+$y))
 
-echo "X+Y=$SUM"
+echo "$x+$y=$SUM"
