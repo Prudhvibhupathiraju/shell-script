@@ -21,7 +21,7 @@ VALIDATE(){
 
 if [ $ID -ne 0 ]
 then
- echo -e "$R ERORR :: Please run this with root access $N"
+ echo -e " $R ERORR :: Please run this with root access $N "
  exit 1
  else
  echo -e "Running  with $G ROOT $N access"
