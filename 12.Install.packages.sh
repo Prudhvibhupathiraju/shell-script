@@ -15,9 +15,9 @@ echo -e "the script has started executing at $Y $TIMESTAMP $N" &>> $LOGFILE
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-    echo -e "$R FAILED $N"
+    echo -e "$2 $R FAILED $N"
     else
-    echo -e "$G SUCCESS $N"
+    echo -e "$2 $G SUCCESS $N"
 }
 
 if [ $id -ne 0 ]
@@ -33,7 +33,7 @@ yum list installed $package
 if [ $? -ne 0 ]
 then
   yum install $package -y
-  VALIDATE $? "$package installation ..."
+  VALIDATE $? "$package installation ..." &>> $LOGFILE
 else
   echo -e "$package is already installed ... $Y SKIPPING $N"
 fi
