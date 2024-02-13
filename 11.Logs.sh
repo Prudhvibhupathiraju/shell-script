@@ -7,13 +7,13 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){ 
-if[ $1 -ne 0 ]
-then
-echo "$2 installation --> Failed"
-exit 1
-else
-echo "$2 installation --> Success"
-fi
+   if[ $1 -ne 0 ]
+   then
+    echo "$2 installation --> Failed"
+    exit 1
+  else
+    echo "$2 installation --> Success"
+   fi
 }
 
 if [ $ID -ne 0 ]
