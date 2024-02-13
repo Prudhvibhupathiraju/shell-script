@@ -1,12 +1,7 @@
 #!/bin/bash
 
-echo "X="
-
-read -s x
-
-echo "Y="
-
-read -s y
+X=$1
+Y=$2
 
 SUM=$(($x+$y))
 
