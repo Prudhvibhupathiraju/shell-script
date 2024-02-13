@@ -8,6 +8,7 @@ then
 echo "$2 installation --> Failed"
 else
 echo "$2 installation --> Success"
+fi
 }
 
 if [ $ID -ne 0 ]
