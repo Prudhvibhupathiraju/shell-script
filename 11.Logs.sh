@@ -2,13 +2,9 @@
 
 ID=$(id -u)
 
-TIMESTAMP=$(date +%F-%H-%M-%S)
-
-LOGFILE="/tmp/$0-$TIMESTAMP.log"
-
 VALIDATE(){ 
    if[ $1 -ne 0 ]
-   then
+    then
     echo "$2 installation --> Failed"
     exit 1
   else
