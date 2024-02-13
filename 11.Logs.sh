@@ -7,7 +7,10 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
+
+echo -e "Script is executing at $Y $TIMESTAMP $N "
 
 VALIDATE(){ 
    if [ $1 -ne 0 ]
@@ -27,7 +30,7 @@ then
  echo -e "Running  with $G ROOT $N access"
  fi
 
-yum installl mysql -y &>> $LOGFILE
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "MySQL"
 
