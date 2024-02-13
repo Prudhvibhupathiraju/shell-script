@@ -23,10 +23,10 @@ then
  echo "Running  with root access"
  fi
 
-yum install mysql -y
+yum install mysql -y &>> $LOGFILE
 
-VALIDATE $? "MySQL" &>> $LOGFILE
+VALIDATE $? "MySQL" 
 
-yum install git -y
+yum install git -y &>> $LOGFILE
 
-VALIDATE $? "GIT" &>> $LOGFILE
+VALIDATE $? "GIT" 
