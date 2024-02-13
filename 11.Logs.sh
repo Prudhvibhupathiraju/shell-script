@@ -2,8 +2,12 @@
 
 ID=$(id -u)
 
+TIMESTAMP=$(date +%F-%H-%M-%S)
+
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
+
 VALIDATE(){ 
-   if[ $1 -ne 0 ]
+   if [ $1 -ne 0 ]
     then
     echo "$2 installation --> Failed"
     exit 1
@@ -20,10 +24,10 @@ then
  echo "Running  with root access"
  fi
 
-yum install mysql -y 
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "MySQL"
 
-yum install git -y 
+yum install git -y &>> $LOGFILE
 
 VALIDATE $? "GIT"
