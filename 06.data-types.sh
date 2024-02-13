@@ -3,9 +3,9 @@
 X=$1
 Y=$2
 
-SUM=$(($x+$y))
+SUM=$(($X+$Y))
 
-echo "$x+$y=$SUM"
+echo "$X+$Y=$SUM"
 
 echo "total arguments passed :: $#"
 
