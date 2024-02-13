@@ -27,7 +27,7 @@ then
  echo -e "Running  with $G ROOT $N access"
  fi
 
-yum install mysql -y &>> $LOGFILE
+yum installl mysql -y &>> $LOGFILE
 
 VALIDATE $? "MySQL"
 
