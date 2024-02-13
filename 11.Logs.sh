@@ -7,7 +7,7 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE(){ 
-if( $1 -ne 0 )
+if[ $1 -ne 0 ]
 then
 echo "$2 installation --> Failed"
 else
@@ -25,8 +25,8 @@ then
 
 yum install mysql -y &>> $LOGFILE
 
-VALIDATE $? "MySQL" 
+VALIDATE $? "MySQL"
 
 yum install git -y &>> $LOGFILE
 
-VALIDATE $? "GIT" 
+VALIDATE $? "GIT"
