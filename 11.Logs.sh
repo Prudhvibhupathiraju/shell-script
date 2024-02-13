@@ -10,6 +10,7 @@ VALIDATE(){
 if[ $1 -ne 0 ]
 then
 echo "$2 installation --> Failed"
+exit 1
 else
 echo "$2 installation --> Success"
 fi
@@ -23,10 +24,10 @@ then
  echo "Running  with root access"
  fi
 
-yum install mysql -y &>> $LOGFILE
+yum install mysql -y 
 
 VALIDATE $? "MySQL"
 
-yum install git -y &>> $LOGFILE
+yum install git -y 
 
 VALIDATE $? "GIT"
