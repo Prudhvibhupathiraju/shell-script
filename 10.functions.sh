@@ -27,6 +27,3 @@ VALIDATE $? "mysql"
 yum install git -y
 
 VALIDATE $? "git"
-
-
-
