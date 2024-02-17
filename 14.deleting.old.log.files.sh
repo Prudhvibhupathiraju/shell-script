@@ -12,9 +12,9 @@ then
     echo -e "Directory : $G $SOURCE_DIRECTORY $N $R NOT FOUND $N"
    fi
 
-FILES_TO_DELETE=$(find $SOURCE_DIRECTORY -type f -mtime +15)
+FILES_TO_DELETE=$(find $SOURCE_DIRECTORY -type f -mtime +15 -name "*.log") 
 
 while IFS= read -r line
 do
 echo -e "Deleting file : $Y $line $N"
-done <<< $FILES_TO_DELETE
+done <<< $FILES_TO_DELE
