@@ -14,6 +14,6 @@ then
 
 while IFS=":" read -r username password user_id group_id user_fullname home_dir shell_path
 do
-echo -e "$Y User Name :$N $G $username $N; $Y Password :$N $G $password $N; $Y User ID :$N $G $user_id $N;
+echo -e "$Y User Name :$N $G $username $N; $Y Password :$N $G $password $N; $Y User ID :$N $G $user_id $N;"
 
 done > $file
