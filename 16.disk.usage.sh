@@ -1,18 +1,17 @@
 #!/bin/bash
 
-disk_percentage=$(df -hT | grep -vE 'tmp|File' | awk '{print $6F}' | cut -d % -f1)
+disk_usage=$(df -hT | grep -vE 'tmp|File')
 disk_threshold=1
 message=""
 
 while IFS= read line
 do
-usage=$line
-partition=$(df -hT | grep -VE 'tmp|File' | awk '{print $1F}')
-message+=$(echo "High disk usage on $partition : $usage")
-
+usage=$( echo $line | awk '{print $6F}' | cut -d % f1 )
+partition=$$( echo $line | awk '{print $1F}')
 if [ $usage -ge $disk_threshold ]
 then
-echo  "$message"
+message+=$(echo "High disk usage on $partition : $usage")
 fi
+done <<< $disk_usage
 
-done <<< $disk_percentage
+echo "Message: $message"
