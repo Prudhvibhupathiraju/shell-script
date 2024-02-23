@@ -11,7 +11,7 @@ echo "-n specify the wishes(mandatory)"
 echo "-h display help"
 }
 
-while getops "n:w:h" opt;
+while getopts "n:w:h" opt;
 do
 case $opt in
 n) Name="$OPTARG";;
