@@ -9,6 +9,7 @@ echo "Options ::"
 echo "-n specify the name(mandatory)"
 echo "-n specify the wishes(mandatory)"
 echo "-h display help"
+}
 
 while getops "n:w:h" opt;
 do
