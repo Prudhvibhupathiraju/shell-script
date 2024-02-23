@@ -26,5 +26,4 @@ echo "Error :: Options '-n' and '-w' should not be empty"
 usage
 exit 1
 fi
-
 echo "Hey $Name, $Wishes" 
