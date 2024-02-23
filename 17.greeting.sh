@@ -27,4 +27,4 @@ usage
 exit 1
 fi
 
-echo "Hey $Name, $Wishes"
+echo "Hey $Name, $Wishes" 
