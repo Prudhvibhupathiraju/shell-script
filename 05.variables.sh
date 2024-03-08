@@ -2,6 +2,6 @@
 
 echo "Please enter your age :"
 
-read -s AGE
+read  AGE
 
 echo "Hey! You are $AGE old"
